@@ -69,7 +69,7 @@ const TypeWriteText = () => {
         </Title>
         <SubTitle>Convaincu? Commencez votre campagne marketing maintenant!</SubTitle>
         <ButtonContainer>
-            <Button text='Allons-y!' link='#about'/>
+            <Button text='Commencer!' link='#about'/>
         </ButtonContainer>
     </>
   )

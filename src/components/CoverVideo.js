@@ -14,7 +14,7 @@ video {
 const CoverVideo = () => {
   return (
     <VideoContainer>
-        <video src={GIF} />
+        <video src={GIF} type="video/mp4" autoPlay loop/>
     </VideoContainer>
   )
 }
