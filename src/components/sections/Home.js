@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import TypeWriteText from '../TypeWriteText';
+import CoverVideo from '../CoverVideo';
 
 const Section = styled.section`
 min-height: ${props => `calc(100vh - ${props.theme.navHeight})` };
 width: 100vw;
 position: relative;
-background-color: ${props=> props.theme.text};
+background-color: ${props=> props.theme.body};
 `
 const Container = styled.div`
 width: 75%;
@@ -33,7 +34,7 @@ const Home = () => {
     <Section>
       <Container>
         <Box> <TypeWriteText /> </Box>
-        <Box> <h1>video</h1> </Box>
+        <Box> <CoverVideo /> </Box>
 
       </Container>
     </Section>
