@@ -3,43 +3,62 @@ import styled from 'styled-components'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
-import 'swiper/css/effect-creative';
+import 'swiper/css/effect-cards';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+// import 'swiper/css/effect-creative';
 
-import { EffectCreative } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay, EffectCards } from 'swiper/modules';
 
+import beginnerPlan from '../assets/beginner-plan.png';
+import mediumPlan from '../assets/medium-plan.png';
+import proPlan from '../assets/pro-plan.png';
+import masterPlan from '../assets/master-plan.png';
+ 
 const Container = styled.div`
 width: 25vw;
 height: 70vh;
 
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+   background-color: ${props => props.theme.carouselColor};
+   border-radius: 20px;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.img-plan {
+    height: 85%;
+}
 `
 
 const Carrousel = () => {
   return (
     <Container>
        <Swiper
-        grabCursor={true}
-        effect={'creative'}
-        creativeEffect={{
-          prev: {
-            shadow: true,
-            translate: [0, 0, -400],
-          },
-          next: {
-            translate: ['100%', 0, 0],
-          },
+        autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
         }}
-        modules={[EffectCreative]}
+        pagination={{
+            type: 'fraction',
+        }}
+        navigation={true}
+        effect={'cards'}
+        grabCursor={true}
+        modules={[EffectCards,Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide> <img src={beginnerPlan} alt='Tarif Débutant' className='img-plan' /> </SwiperSlide>
+        <SwiperSlide> <img src={mediumPlan} alt='Tarif Moyen' className='img-plan' /> </SwiperSlide>
+        <SwiperSlide> <img src={proPlan} alt='Tarif Pro' className='img-plan' /> </SwiperSlide>
+        <SwiperSlide> <img src={masterPlan} alt='Tarif Master' className='img-plan' /> </SwiperSlide>
       </Swiper>
     </Container>
   )
