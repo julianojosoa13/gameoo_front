@@ -1,10 +1,15 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Section = styled.section`
+
+`
 
 const Roadmap = () => {
   return (
-    <div>
+    <Section>
       Roadmap
-    </div>
+    </Section>
   )
 }
 
