@@ -10,6 +10,7 @@ import Showcase from './components/sections/Showcase';
 import Team from './components/sections/Team';
 import Faq from './components/sections/Faq';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -20,10 +21,9 @@ function App() {
         <Home />
         <About />
         <Roadmap />
-        {/* <Showcase /> */}
         <Team />
-        {/* <Faq /> */}
         <Footer />
+        <ScrollToTop />
       </ThemeProvider>
     </>
   );
