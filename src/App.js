@@ -20,7 +20,7 @@ function App() {
         <Home />
         <About />
         <Roadmap />
-        <Showcase />
+        {/* <Showcase /> */}
         <Team />
         <Faq />
         <Footer />

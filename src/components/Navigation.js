@@ -49,7 +49,7 @@ const Navigation = () => {
           <MenuItem>Accueil</MenuItem>
           <MenuItem>A Propos</MenuItem>
           <MenuItem>Roadmap</MenuItem>
-          <MenuItem>Showcase</MenuItem>
+          {/* <MenuItem>Showcase</MenuItem> */}
           <MenuItem>Equipe</MenuItem>
           <MenuItem>FAQ</MenuItem>
         </Menu>
