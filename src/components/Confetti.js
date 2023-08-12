@@ -7,7 +7,9 @@ const ConfettiComponent = () => {
   return (
     <Confetti
     width={width}
-    height={height}
+    height={height*1.25}
+    numberOfPieces={150}
+    gravity={0.01}
     />
   )
 }

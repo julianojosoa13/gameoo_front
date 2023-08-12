@@ -22,7 +22,7 @@ function App() {
         <Roadmap />
         {/* <Showcase /> */}
         <Team />
-        <Faq />
+        {/* <Faq /> */}
         <Footer />
       </ThemeProvider>
     </>
