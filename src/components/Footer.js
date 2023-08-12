@@ -41,7 +41,7 @@ justify-content: center;
 const IconList = styled.div`
 display: flex;
 align-items: center;
-margin: 0 auto;
+margin: 1rem auto;
 
 &>*{
   padding-right: 0.5rem;
@@ -53,6 +53,44 @@ margin: 0 auto;
 }
 `
 
+const MenuItems = styled.ul`
+list-style: none;
+width: 50%;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-gap: 1rem;
+`
+
+const Item = styled.li`
+width: fit-content;
+cursor: pointer;
+
+&::after{
+  content: ' ';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: ${props=> props.theme.text};
+  transition: width 0.3s  ease;
+}
+
+&:hover::after {
+  width: 100%;
+}
+`
+
+const Bottom = styled.div`
+width: 75%;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+a {
+  text-decoration: underline;
+}
+`
+
 const Footer = () => {
   return (
     <Section>
@@ -61,18 +99,34 @@ const Footer = () => {
         <Left>
           <Logo />
           <IconList>
-          <a href='http://facebook.com' target='_blank' rel='noopener'>
+          <a href='http://facebook.com' target='_blank' rel='noopener noreferrer'>
             <Facebook />
           </a>
-          <a href='http://instagram.com' target='_blank' rel='noopener'>
+          <a href='http://instagram.com' target='_blank' rel='noopener noreferrer'>
             <Instagram />
           </a>
-          <a href='http://linkedin.com' target='_blank' rel='noopener'>
+          <a href='http://linkedin.com' target='_blank' rel='noopener noreferrer'>
             <LinkedIn />
           </a>
           </IconList>
         </Left>
+        <MenuItems>
+          <Item>Accueil</Item>
+          <Item>A Propos</Item>
+          <Item>Roadmap</Item>
+          {/* <Item>Showcase</Item> */}
+          <Item>Equipe</Item>
+          {/* <Item>FAQ</Item> */}
+        </MenuItems>
       </Container>
+      <Bottom>
+        <span>
+          &copy; {new Date().getFullYear()} Gameoo. Tous droits réservés.
+        </span>
+        <span>
+          Fait avec &#10084; par <a href='https://www.facebook.com/josoajuliano' target='_blank'>Juliano Josoa</a>
+        </span>
+      </Bottom>
     </Section>
   )
 }
