@@ -17,11 +17,28 @@ display: flex;
 /* align-items: center; */
 flex-direction: column
 `
+const Container = styled.div`
+width: 75%;
+margin: 2rem auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
 
+border-bottom: 1px solid ${props=>props.theme.text};
+`
+const Left = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+`
 const Footer = () => {
   return (
     <Section>
       <Banner />
+      <Container>
+
+      </Container>
     </Section>
   )
 }
