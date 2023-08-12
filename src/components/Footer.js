@@ -3,6 +3,10 @@ import styled from 'styled-components'
 import Banner from './Banner'
 import Logo from './Logo'
 
+import Facebook from "../Icons/Facebook";
+import Instagram from "../Icons/Instagram";
+import LinkedIn from "../Icons/LinkedIn";
+
 
 const Section = styled.section`
 width: 100vw;
@@ -33,6 +37,22 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 `
+
+const IconList = styled.div`
+display: flex;
+align-items: center;
+margin: 0 auto;
+
+&>*{
+  padding-right: 0.5rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+`
+
 const Footer = () => {
   return (
     <Section>
@@ -40,6 +60,17 @@ const Footer = () => {
       <Container>
         <Left>
           <Logo />
+          <IconList>
+          <a href='http://facebook.com' target='_blank' rel='noopener'>
+            <Facebook />
+          </a>
+          <a href='http://instagram.com' target='_blank' rel='noopener'>
+            <Instagram />
+          </a>
+          <a href='http://linkedin.com' target='_blank' rel='noopener'>
+            <LinkedIn />
+          </a>
+          </IconList>
         </Left>
       </Container>
     </Section>
