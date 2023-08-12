@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useRef } from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 import Vector from '../Icons/Vector'
 import { gsap } from 'gsap'
@@ -19,6 +19,10 @@ svg {
     height: 100%;
 }
 `
+const Bounce = keyframes`
+from {transform: translate(-50%) scale(0.5);}
+to {transform: translate(-50%) scale(1);}
+`
 
 const Ball = styled.div`
 position: absolute;
@@ -29,10 +33,13 @@ width: 1.5rem;
 height: 1.5rem;
 border-radius: 50%;
 background-color: ${props=>props.theme.text};
+
+animation: ${Bounce} 0.5s linear infinite alternate;
 `
 
 const DrawSvg = () => {
   const ref = useRef(null);
+  const ballRef = useRef(null);
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -58,18 +65,26 @@ const DrawSvg = () => {
 
                 svg.style.strokeDashoffset = (length - draw );
                 console.log(svg.style.strokeDashoffset)
+            },
+            onToggle: (self) => {
+                if(self.isActive) {
+                    ballRef.current.style.display  = 'none';
+
+                } else {
+                    ballRef.current.style.display  = 'inline-block';
+                }
             }
         }
     })
 
     return () => {
-
+        if (t1) t1.kill();
     };
   }, [])
 
   return (
     <>
-        <Ball />
+        <Ball ref={ballRef} />
         <VectorContainer ref={ref}>
             <Vector />
         </VectorContainer>
