@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
+import { useRef } from 'react'
+import { useWindowScroll } from 'react-use'
 import styled from 'styled-components'
 
 const Up = styled.div`
@@ -45,8 +47,20 @@ const scrollToTop = () => {
     })
   }
 
+  const ref = useRef(null)
+
+  const {y} = useWindowScroll();
+  
+  useLayoutEffect(()=>{
+    if (y > 200) {
+        ref.current.style.display = "flex"
+    } else {
+        ref.current.style.display = "none"
+    }
+  },[y])
+
   return (
-    <Up onClick={scrollToTop}>
+    <Up ref={ref} onClick={scrollToTop}>
       &#x2191;
     </Up>
   )
