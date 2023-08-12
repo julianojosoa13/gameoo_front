@@ -41,17 +41,25 @@ cursor: pointer;
 }
 `
 const Navigation = () => {
+
+  const scrollTo = (id) => {
+    let element = document.getElementById(id)
+
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    })
+  }
   return (
     <Section>
       <NavBar>
         <Logo />
         <Menu>
-          <MenuItem>Accueil</MenuItem>
-          <MenuItem>A Propos</MenuItem>
-          <MenuItem>Roadmap</MenuItem>
-          {/* <MenuItem>Showcase</MenuItem> */}
-          <MenuItem>Equipe</MenuItem>
-          <MenuItem>FAQ</MenuItem>
+          <MenuItem onClick={() => scrollTo('home')}>Accueil</MenuItem>
+          <MenuItem onClick={() => scrollTo('about')}>A Propos</MenuItem>
+          <MenuItem onClick={() => scrollTo('roadmap')}>Roadmap</MenuItem>
+          <MenuItem onClick={() => scrollTo('team')}>Equipe</MenuItem>
         </Menu>
         <Button text='Se connecter' link='https://duckduckgo.com' />
       </NavBar>

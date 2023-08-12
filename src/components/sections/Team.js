@@ -6,6 +6,7 @@ import img1 from '../../assets/Nfts/bighead-4.svg';
 import img2 from '../../assets/Nfts/bighead.svg';
 import img3 from '../../assets/Nfts/bighead-2.svg';
 import img4 from '../../assets/Nfts/bighead-5.svg';
+
 import ConfettiComponent from '../Confetti';
 
 
@@ -111,7 +112,7 @@ const MemberComponent = ({img, name=" ", position= " "}) => {
 }
 const Team = () => {
   return (
-    <Section>
+    <Section id="team"> 
       <ConfettiComponent />
       <Title>Notre Equipe</Title>
       <Container>

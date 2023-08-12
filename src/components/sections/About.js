@@ -67,7 +67,7 @@ margin: 1rem auto;
 `
 const About = () => {
   return (
-    <Section>
+    <Section id='about'>
       <Container>
         <Box><Carrousel /></Box>
         <Box>

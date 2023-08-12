@@ -31,7 +31,7 @@ align-items: center;
 
 const Home = () => {
   return (
-    <Section>
+    <Section id='home'>
       <Container>
         <Box> <TypeWriteText /> </Box>
         <Box> <CoverVideo /> </Box>
