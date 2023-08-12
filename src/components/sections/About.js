@@ -72,7 +72,7 @@ const About = () => {
         <Box><Carrousel /></Box>
         <Box>
           <Title>
-            C'est quoi la <i>gamification</i>?  
+            C'est quoi <i>gamification</i>?  
           </Title>
           <SubText>
             Un service qui rejoint le neuromarketing et
