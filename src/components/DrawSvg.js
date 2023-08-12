@@ -20,6 +20,17 @@ svg {
 }
 `
 
+const Ball = styled.div`
+position: absolute;
+top: 0;
+left: 50%;
+transform: translate(-50%);
+width: 1.5rem;
+height: 1.5rem;
+border-radius: 50%;
+background-color: ${props=>props.theme.text};
+`
+
 const DrawSvg = () => {
   const ref = useRef(null);
 
@@ -45,7 +56,7 @@ const DrawSvg = () => {
                 const draw = length * self.progress;
                 // console.log(draw)
 
-                svg.style.strokeDashoffset = (length - draw ) * 2;
+                svg.style.strokeDashoffset = (length - draw );
                 console.log(svg.style.strokeDashoffset)
             }
         }
@@ -57,9 +68,12 @@ const DrawSvg = () => {
   }, [])
 
   return (
-    <VectorContainer>
-      <Vector />
-    </VectorContainer>
+    <>
+        <Ball />
+        <VectorContainer ref={ref}>
+            <Vector />
+        </VectorContainer>
+    </>
   )
 }
 
