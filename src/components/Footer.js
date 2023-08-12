@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Banner from './Banner'
+import Logo from './Logo'
 
 
 const Section = styled.section`
@@ -37,7 +38,9 @@ const Footer = () => {
     <Section>
       <Banner />
       <Container>
-
+        <Left>
+          <Logo />
+        </Left>
       </Container>
     </Section>
   )

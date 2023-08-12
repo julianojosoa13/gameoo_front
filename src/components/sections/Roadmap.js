@@ -59,7 +59,7 @@ align-items: center;
   }
 
   p {
-    border-radius: 40px 0 4% 0;
+    border-radius: 40px 0 40px 0;
   }
 }
 
