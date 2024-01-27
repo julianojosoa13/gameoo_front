@@ -80,6 +80,8 @@ const Name = styled.h2`
   text-transform: uppercase;
   color: ${props=>props.theme.body};
   margin-top: 1rem;
+  height: 70px;
+  margin-bottom: .5rem;
 `
 
 const Position = styled.h2`
@@ -118,8 +120,8 @@ const Team = () => {
       <Title>Notre Equipe</Title>
       <Container>
         <MemberComponent img={img3} name='Koloina Ratsimbazafy' position='BUSINESS DEVELOPPER' />
-        <MemberComponent img={img1} name='Juliano Josoa' position='Développeur Mobile / Web' />
         <MemberComponent img={img4} name='Solofoniaina Luc' position='RÉVISEUR / AUDIT FINANCIER' />
+        <MemberComponent img={img1} name='Juliano Josoa' position='Développeur Mobile / Web' />
       </Container>
     </Section>
   )
