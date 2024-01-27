@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import img1 from '../../assets/Nfts/bighead-4.svg';
-import img2 from '../../assets/Nfts/bighead.svg';
+import img2 from '../../assets/Nfts/bighead-9.svg';
 import img3 from '../../assets/Nfts/bighead-2.svg';
 import img4 from '../../assets/Nfts/bighead-5.svg';
 
@@ -118,7 +118,7 @@ const Team = () => {
       <Container>
         <MemberComponent img={img1} name='Juliano Josoa' position='Développeur Mobile / Web' />
         <MemberComponent img={img2} name='Alex Razafintsalama' position='SALES and MARKETING MANAGER' />
-        <MemberComponent img={img3} name='Koloia Lalatian' position='BUSINESS DEVELOPPER' />
+        <MemberComponent img={img3} name='Koloina Ratsimbazafy' position='BUSINESS DEVELOPPER' />
         <MemberComponent img={img4} name='Solofoniaina Luc' position='RÉVISEUR / AUDIT FINANCIER' />
       </Container>
     </Section>
